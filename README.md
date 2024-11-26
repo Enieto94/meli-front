@@ -10,4 +10,8 @@ Currently, two official plugins are available:
 
 # Initialize frontend
 
-# Initialize backend
+## install dependencies 
+pnpm install
+
+## run local server address by default is http://localhost:5175
+pnpm run dev
