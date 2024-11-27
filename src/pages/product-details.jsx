@@ -33,23 +33,23 @@ function ProductDetailsPage() {
         <>
             <Header />
 
-            <div className='breadcumb'>
-                {product.category_id}
-            </div>
+            {/* <div className='breadcumb'>
+                {product.}
+            </div> */}
 
             <div className='prodDetail'>
-                <img src={product.thumbnail} alt="" />
+                <img src={product.picture} alt="" />
                 <div>
                     <span>{productId}</span>
                     <h1>{product.title}</h1>
-                    <h3>$ {product.price} <span>00</span></h3>
+                    <h3>$ {product.price.amount} <span>00</span></h3>
                     <button>Comprar</button>
                 </div>
             </div>
             <div className='prodDesc'>
                 <h2>Descripción del producto</h2>
                 <p>
-                    {product.description.plain_text}
+                    {product.description}
                 </p>
             </div>
         </>

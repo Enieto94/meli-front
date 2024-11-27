@@ -1,4 +1,6 @@
-const BASE_API_URL = "https://api.mercadolibre.com"
+import { API_URL } from "../../app-config"
+
+const BASE_API_URL = API_URL
 
 export const fetchProducts = async ({ query = 'query', limit }) => {
     try {
@@ -6,9 +8,9 @@ export const fetchProducts = async ({ query = 'query', limit }) => {
 
         if (limit) queryParams += `&limit=${limit}`
 
-        const response = await fetch(`${BASE_API_URL}/sites/MLA/search${queryParams}`)
+        const response = await fetch(`${BASE_API_URL}/items/${queryParams}`)
         const data = await response.json()
-        const products = data.results
+        const products = data.items
 
         return products
 
@@ -20,16 +22,9 @@ export const fetchProducts = async ({ query = 'query', limit }) => {
 export const fetchProductDetail = async (productId) => {
     try {
         const response = await fetch(`${BASE_API_URL}/items/${productId}`)
-        const productBaseData = await response.json()
+        const productData = await response.json()
 
-        const descriptionResponse = await fetch(`${BASE_API_URL}/items/${productId}/description`)
-        const productDescription = await descriptionResponse.json()
-        console.log('PRODUCT_DESCRIPTION:', productDescription)
-
-        return {
-            ...productBaseData,
-            description: productDescription
-        }
+        return productData.item
 
     } catch (error) {
         throw new Error(error)

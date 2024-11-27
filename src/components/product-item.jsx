@@ -12,17 +12,17 @@ export function ProductItem({ productData }) {
 
             <Link to={`/items/${productData.id}`}>
                 <div>
-                    <img src={productData.thumbnail} alt={productData.title} />
+                    <img src={productData.picture} alt={productData.title} />
                 </div>
                 <div className="content">
-                    <p>$ {productData.price}</p>
+                    <p>$ {productData.price.amount}</p>
                     <h3>
                         {productData.title}
                     </h3>
                 </div>
                 <div className="content">
                     <p>
-                        {productData.country}
+                        {productData.condition}
                     </p>
                 </div>
 
