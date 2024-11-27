@@ -15,3 +15,7 @@ pnpm install
 
 ## run local server address by default is http://localhost:5175
 pnpm run dev
+
+
+# Initialize backend localhost:3000
+npm run dev

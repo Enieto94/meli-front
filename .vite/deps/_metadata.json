@@ -1,0 +1,34 @@
+{
+  "hash": "6ce38659",
+  "configHash": "50e4655c",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "6a4223ae",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/.pnpm/react@18.3.1/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "7a53a062",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "b9d6dcd0",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/.pnpm/react-router-dom@7.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "2598a58a",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-XAB4XEIQ": {
+      "file": "chunk-XAB4XEIQ.js"
+    },
+    "chunk-GF54CYHL": {
+      "file": "chunk-GF54CYHL.js"
+    }
+  }
+}
